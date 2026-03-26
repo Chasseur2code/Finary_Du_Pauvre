@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
-import squarify
+# import squarify
 import numpy as np
 from datetime import datetime
 import plotly.express as px
@@ -147,7 +147,7 @@ def Evolution_totale_par_classe_bar(ax, nb=0):
     ax[nb].set_xticklabels(df_Total_Par_Classe.index.strftime('%b %y'), rotation=45, ha='center')
     ax[nb].set_title("Evolution totale par classe")
 
-def Repartition_par_ligne_Mondrian(ax, nb=0):
+""" def Repartition_par_ligne_Mondrian(ax, nb=0):
     """Mondrian, aussi appelé Treemap"""
     squarify.plot(
         sizes=df.iloc[0],
@@ -158,7 +158,7 @@ def Repartition_par_ligne_Mondrian(ax, nb=0):
         text_kwargs={'fontsize': 8, "wrap":True}
     )
     ax[nb].set_title("Répartition par ligne")
-    ax[nb].axis("off")
+    ax[nb].axis("off") """
 
 def Evolution_titres_stackplot(ax, nb=0):
     df_titre = df[Classe["Actions"]+Classe["Matieres_Premieres"]]
