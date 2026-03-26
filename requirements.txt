@@ -2,8 +2,5 @@ streamlit
 streamlit_option_menu
 pandas
 matplotlib
-matplotlib.pyplot 
 numpy
-datetime
-plotly.express
-streamlit
+plotly
