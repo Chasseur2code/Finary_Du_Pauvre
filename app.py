@@ -10,11 +10,11 @@ st.set_page_config(
 
 with st.sidebar:
     selected = option_menu(
-    menu_title = "Analyse du portofolio",
-    options = ["Par Classes","Par Lignes"],
-    icons = ["envelope","activity"],
-    menu_icon = "cast",
-    default_index = 0)
+        menu_title = "Analyse du portofolio",
+        options = ["Par Classes","Par Lignes"],
+        icons = ["envelope","activity"],
+        menu_icon = "cast",
+        default_index = 0)
 
 if selected == "Par Classes":
     st.title("Mon Portofolio d'Investissement")
@@ -62,7 +62,7 @@ if selected == "Par Classes":
 
     styled = df_perf.style.applymap(color_performance, subset=df_perf.columns[1:])
     st.write(styled.to_html(), unsafe_allow_html=True)
-    
+
     st.markdown("---")
 
     date_pie = st.slider(

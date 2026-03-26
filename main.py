@@ -148,7 +148,7 @@ def Evolution_totale_par_classe_bar(ax, nb=0):
     ax[nb].set_title("Evolution totale par classe")
 
 """ def Repartition_par_ligne_Mondrian(ax, nb=0):
-    """Mondrian, aussi appelé Treemap"""
+    "Mondrian, aussi appelé Treemap"
     squarify.plot(
         sizes=df.iloc[0],
         label=[col if df.iloc[0][col] > df.iloc[0].max() * 0.03 else "" for col in df.columns],
@@ -474,7 +474,6 @@ def Performance_par_ligne_glissante(selected_lignes=None, date_debut=None, date_
     df_perf = pd.DataFrame(performances)
     return df_perf
 
-
 # %% Main visualisation function
 
 def Visualisation(nb_ligne=2, nb_colonne=3):
@@ -488,7 +487,7 @@ def Visualisation(nb_ligne=2, nb_colonne=3):
         ax = ax.ravel()  # aplati le tableau 2D en 1D
 
     Repartition_par_classe_pie(ax, 0)
-    Repartition_par_ligne_Mondrian(ax, 1) # pas trop convaincu par celui la mais bon
+    # Repartition_par_ligne_Mondrian(ax, 1) # pas trop convaincu par celui la mais bon
     Evolution_titres_stackplot(ax, 2)
     Evolution_totale_classe_stackplot(ax, 3)
     performance_ligne_bar(ax, 4)
