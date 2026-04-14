@@ -1,11 +1,16 @@
-# Axes d'amélioration sans éclater en plusieurs fichiers
+# Axes d'amélioration
 
-Sur le nommage : quelques incohérences comme TR_Titre_Argnet (faute de frappe), dic_Total_Par_Clasee (double faute). Pour les fonctions, tu mélanges français et anglais (perf_globale, Evolution_totale_classe_stackplot), mieux vaut choisir une langue.
+L'objectif d'une app qui me donne facilement les infos que je veux est atteint ! C'est trop cool
 
-Sur les magic values : les dates "2025-01-26", "2025-04-15" dans performance_ligne_bar sont codées en dur. Les sortir en constantes ou paramètres rendrait la fonction réutilisable.
+Maintenant, je pourrai apémiorer la lisibilité (notament sur téléphone) mais le pus grand point de friction est de loin la récupération des données.
+La prochaine amélioration est d'intégrer yfinance pour avoir des updates quotidiennes !
+Je pourrai en profiter pour correctemetn calculer ma perf, sans que les mouvement influes !
 
-Sur la signature des fonctions : le pattern (ax, nb=0) est un peu fragile — passer ax[nb] directement en paramètre serait plus propre et plus testable.
-Sur le code dupliqué : perf_par_classe et perf_globale partagent la même logique (valeur / invest - 1) * 100, tu pourrais avoir une fonction calcul_perf(valeur, invest) commune.
+ré-orga le code en plusieurs fichiers ! pour qu'aucun n'excede quelques centaines de lignes
+
+construire l'histroique de mes opérations
+au moins pour AV_MT par ex, et après c'est parti pour le code !
+Mais ca devrait meme pas etre si dur c'est cool 
 
 # Bordel qui étais dans keep
 
